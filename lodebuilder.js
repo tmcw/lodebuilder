@@ -1,6 +1,6 @@
 function draw(options) {
-    var lineWidth = options.lineWidth || 2;
-    var lineRatio = options.lineRatio || 5;
+    var lineWidth = Math.min(options.lineWidth || 2, 15);
+    var lineRatio = Math.min(options.lineRatio || 5, 20);
     var size = lineWidth * lineRatio;
     var encoder = new GIFEncoder();
     encoder.setRepeat(0); //auto-loop
@@ -42,6 +42,7 @@ function draw(options) {
     encoder.finish();
     document.getElementById('big')
         .style.backgroundImage = 'url(data:image/gif;base64,' + encode64(encoder.stream().getData()) + ')';
+    document.getElementById('imggif').src = 'data:image/gif;base64,' + encode64(encoder.stream().getData());
     document.getElementById('style')
         .value = 'url(data:image/gif;base64,' + encode64(encoder.stream().getData()) + ')';
 }
