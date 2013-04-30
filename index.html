@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>lodebuilder</title>
+        <link rel='stylesheet' type='text/css' href='style.css' />
+        <link rel='stylesheet' type='text/css' href='site.css' />
+        <meta http-equiv='content-type' content='text/html; charset=utf-8' />
+    </head>
+    <body>
+    <div class='container pad2'>
+        <h1>lodebuilder</h1>
+        <div id='big'></div>
+        <textarea id='style' class='col12'></textarea>
+        <div class='col3'>
+            <label for='strokeStyle'>line color</label>
+            <input id='strokeStyle'>
+        </div>
+        <div class='col3'>
+            <label for='fillStyle'>fill color</label>
+            <input id='fillStyle'>
+        </div>
+        <div class='col3'>
+            <label for='lineWidth'>line width</label>
+            <input id='lineWidth'>
+        </div>
+        <div class='col3'>
+            <label for='lineRatio'>line ratio</label>
+            <input id='lineRatio'>
+        </div>
+    </div>
+
+        <script src='js/lib/GIFEncoder.js'></script>
+        <script src='js/lib/LZWEncoder.js'></script>
+        <script src='js/lib/NeuQuant.js'></script>
+        <script src='js/lib/b64.js'></script>
+        <script src='lodebuilder.js'></script>
+        <script src='site.js'></script>
+    </body>
+</html>

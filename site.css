@@ -1,0 +1,14 @@
+#preview, #big {
+    border:1px solid #666;
+}
+
+#big {
+    width:100%;
+    height:200px;
+}
+
+textarea {
+    font-style: monospace;
+    color: #666;
+    height:50px;
+}
