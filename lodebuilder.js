@@ -5,6 +5,7 @@ function draw(options) {
     var encoder = new GIFEncoder();
     encoder.setRepeat(0); //auto-loop
     encoder.setSize(size, size);
+    encoder.setDelay(options.delay || 200);
     encoder.start();
 
     var c = document.createElement('canvas');
@@ -18,7 +19,9 @@ function draw(options) {
     ctx.lineWidth = lineWidth;
     lw = ctx.lineWidth * 1;
 
-    for (var x = 0; x < size; x++) {
+    var loops = options.static ? 1 : size;
+
+    for (var x = 0; x < loops; x++) {
         ctx.fillRect(0, 0, size, size);
 
         ctx.beginPath();
